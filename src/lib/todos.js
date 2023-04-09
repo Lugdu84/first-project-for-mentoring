@@ -1,4 +1,4 @@
-export const todos = [
+export const todosList = [
 	{
 		id: 1,
 		title: "Todo One",
