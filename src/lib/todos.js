@@ -14,7 +14,7 @@ export const todosList = [
 	},
 ];
 
-export function useTodos(initialTodos) {
+export const useTodos = (initialTodos) => {
 	const [todos, setTodos] = useState(initialTodos);
 
 	const addTodo = (title) => {
@@ -48,4 +48,4 @@ export function useTodos(initialTodos) {
 	};
 
 	return { todos, addTodo, deleteTodo, updateTodo, toggleTodo };
-}
+};
