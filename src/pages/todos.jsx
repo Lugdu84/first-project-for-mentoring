@@ -32,7 +32,6 @@ export default function Todos() {
 		setTodos(todosUpdated);
 	};
 
-	console.log("todos", todos);
 	return (
 		<div>
 			<Link href={"/"}>Lien vers la HomePage</Link>
