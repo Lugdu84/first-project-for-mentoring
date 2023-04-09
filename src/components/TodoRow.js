@@ -6,7 +6,7 @@ export default function TodoRow({ todo, onCheck, onDelete }) {
 			<p>{todo.title}</p>
 			<div className="flex gap-2 items-center">
 				<input
-					onClick={onCheck}
+					onChange={onCheck}
 					type="checkbox"
 					value={todo.completed}
 				/>
