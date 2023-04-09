@@ -14,7 +14,7 @@ export default function Todos() {
 			title,
 			completed: false,
 		};
-		setTodos([...todos, todo]);
+		setTodos([...todos, todo].sort((a, b) => a.title.localeCompare(b.title)));
 		e.target.reset();
 	};
 
@@ -35,7 +35,7 @@ export default function Todos() {
 	return (
 		<div>
 			<Link href={"/"}>Lien vers la HomePage</Link>
-			<h1>Todos</h1>
+			<h1 className="text-center">Todos</h1>
 			<form
 				onSubmit={handleSubmit}
 				className="flex gap-2 ml-2">
@@ -49,16 +49,14 @@ export default function Todos() {
 					value="Ajouter"
 				/>
 			</form>
-			{todos
-				.sort((a, b) => a.title.localeCompare(b.title))
-				.map((todo) => (
-					<TodoRow
-						onDelete={() => handleDelete(todo.id)}
-						onCheck={() => handleCheck(todo.id)}
-						key={todo.id}
-						todo={todo}
-					/>
-				))}
+			{todos.map((todo) => (
+				<TodoRow
+					onDelete={() => handleDelete(todo.id)}
+					onCheck={() => handleCheck(todo.id)}
+					key={todo.id}
+					todo={todo}
+				/>
+			))}
 		</div>
 	);
 }

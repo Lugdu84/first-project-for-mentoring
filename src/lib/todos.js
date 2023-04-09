@@ -1,12 +1,12 @@
 export const todosList = [
 	{
 		id: 1,
-		title: "Todo One",
+		title: "Premier todo de test",
 		completed: false,
 	},
 	{
 		id: 2,
-		title: "Todo Two",
+		title: "Un autre todo de test",
 		completed: false,
 	},
 ];
